@@ -10,6 +10,10 @@ app.use(bodyParser.json())
 
 // console.log(process.env.DB_COLLECTION)
 
+app.get('/', (req, res)=>{
+  res.send('Mongo Db and all file working')
+})
+
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true
